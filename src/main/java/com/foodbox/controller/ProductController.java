@@ -50,17 +50,17 @@ public class ProductController {
 		return service.getAllProducts();
 	}
 
-	@DeleteMapping("{id}")
-	List<Product> delete(@PathVariable Long id) {
+	@DeleteMapping("{product_id)}")
+	List<Product> delete(@PathVariable Long product_id) {
 
 //	  Product product = service.findById(id);
-		service.deleteById(id);
+		service.deleteById(product_id);
 		return service.getAllProducts();
 	}
 
 	@GetMapping("{id}")
-	public Product getProductById(@PathVariable Long id) {
-		return service.findById(id);
+	public Product getProductById(@PathVariable Long product_id) {
+		return service.findById(product_id);
 //		model.addAttribute("Product", Product);
 //		return "edit-product";
 

@@ -29,8 +29,8 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public void deleteById(Long id) {
-		repository.deleteById(id);
+	public void deleteById(Long product_id) {
+		repository.deleteById(product_id);
 	}
 
 	@Override
@@ -39,8 +39,8 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public Product findById(Long id) {
-		Optional<Product> bk = repository.findById(id);
+	public Product findById(Long product_id) {
+		Optional<Product> bk = repository.findById(product_id);
 		if(bk.isPresent())
 			return bk.get();
 		else

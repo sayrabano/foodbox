@@ -14,10 +14,10 @@ public interface ProductService {
 
 	public Product save(Product Product);
 
-	public void deleteById(Long id);
+	public void deleteById(Long product_id);
 
 	public void update(@Valid Product Product);
 
-	public Product findById(Long id);	
+	public Product findById(Long product_id);	
 	
 }
